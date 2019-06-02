@@ -1,3 +1,17 @@
+---
+title: 'Hello World'
+cover: 'covers/laptop.webp'
+coverBlur: 'covers/laptop_blur.webp'
+created: 2019-06-01
+lastUpdated: 2019-06-02
+isDraft: false
+excerpt: 'This website is made with React, Gatsby, and TypeScript...'
+---
+
+This is my developer portfolio website.
+
+The content below is from the readme on my github. Read it to learn how to setup and edit a copy of this website.
+
 # [ReadMe.md](https://github.com/JonathanMcCaffrey/website-jonathanmc/blob/master/README.md)
 
 ## About

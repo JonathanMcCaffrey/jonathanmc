@@ -1,0 +1,18 @@
+---
+items:
+  - title: About
+    link: /content/frontpage/about
+    cover: 'covers/computer.webp'
+    coverBlur: 'covers/computer_blur.webp'
+  - title: Skills
+    link: /content/frontpage/skills
+    cover: ''
+    coverBlur: ''
+  #/  - title: References
+  #    link: /content/frontpage/references
+  #    cover: 'covers/devices.webp'
+  #    coverBlur: 'covers/devices_blur.webp'
+  - title: Past Work
+    link: /content/frontpage/pastwork
+    cover: 'covers/laptop.webp'
+    coverBlur: 'covers/laptop_blur.webp'

@@ -1,0 +1,50 @@
+@keyframes example2 {
+  from {
+    z-index: 4;
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.coverImg {
+  filter: brightness(60%);
+  background-attachment: fixed;
+  width: 100vw;
+  margin-right: -100vw;
+  margin-left: -20px;
+}
+
+@media only screen and (max-width: 920px) {
+  .coverImg {
+    margin-left: 0px;
+    width: 200vw;
+  }
+}
+
+.coverImg + .coverImg + .coverImg {
+  filter: blur(50px);
+
+  opacity: 0.02;
+}
+
+@media only screen and (min-width: 1024px) {
+  .coverImg {
+    height: 60vw;
+  }
+
+  .coverImg + .coverImg {
+    margin-top: -60vw;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .coverImg {
+    height: 800px;
+  }
+
+  .coverImg + .coverImg {
+    margin-top: -800px;
+  }
+}

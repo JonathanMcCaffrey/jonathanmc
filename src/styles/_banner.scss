@@ -1,0 +1,89 @@
+$color-banner-background: #228;
+$color-banner-border: black;
+
+@media only screen and (min-width: 1024px) {
+  .banner {
+    height: 300px;
+    margin: auto;
+    width: 98vw;
+    max-width: 1449px;
+    background-color: $color-banner-background;
+    background-image: linear-gradient(
+      #228,
+      #228,
+      #228,
+      #228,
+      #228,
+      #228,
+      #228,
+      #228,
+      #228,
+      #191979
+    );
+
+    font-weight: bold;
+    border: $color-banner-border 2px solid;
+
+    padding-top: 1px;
+
+    position: relative;
+    top: 32px;
+    z-index: 400;
+    height: 50px;
+    margin-bottom: -50px;
+    text-align: center;
+    overflow: hidden;
+    display: block-inline;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .banner {
+      padding-top: 10px;
+    }
+  }
+
+  .banner_content {
+    margin: auto;
+  }
+
+  .coffee {
+    height: 20px;
+    width: 20px;
+    display: block-inline;
+  }
+
+  .close {
+    cursor: pointer;
+
+    padding: 30px;
+    margin: -30px;
+
+    font-size: 25px;
+    color: lightblue;
+    margin-right: 5px;
+    height: 40px;
+    width: 40px;
+    right: 8px;
+    top: 0;
+    display: block-inline;
+    float: right;
+    position: absolute;
+  }
+
+  .banner_text {
+    height: 20px;
+    font-size: 0.73rem;
+    display: block-inline;
+    overflow: none;
+  }
+
+  .banner_text {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .banner {
+    display: none;
+  }
+}
