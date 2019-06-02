@@ -1,7 +1,7 @@
 ---
 title: 'Hello World'
-cover: 'covers/laptop.webp'
-coverBlur: 'covers/laptop_blur.webp'
+cover: 'covers/devices.webp'
+coverBlur: 'covers/devices_blur.webp'
 created: 2019-06-01
 lastUpdated: 2019-06-02
 isDraft: false
