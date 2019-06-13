@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-const chalk = require('chalk');
-const clear = require('clear');
-const figlet = require('figlet');
-const path = require('path');
-const program = require('commander');
+import chalk from 'chalk';
+import clear from 'clear';
+import figlet from 'figlet';
+import path from 'path';
+import program from 'commander';
 
 clear();
 console.log(
