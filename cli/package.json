@@ -1,0 +1,32 @@
+{
+  "name": "website-cli",
+  "version": "0.0.1",
+  "description": "An example CLI for updating a website.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "create": "npm run build && npm run test",
+    "build": "tsc -p .",
+    "test": "sudo npm i -g && website",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "author": "Jonathan McCaffrey",
+  "license": "MIT",
+  "bin": {
+    "website": "./lib/index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "clear": "^0.1.0",
+    "commander": "^2.19.0",
+    "figlet": "^1.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.8",
+    "nodemon": "^1.18.7",
+    "ts-node": "^8.2.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  }
+}
