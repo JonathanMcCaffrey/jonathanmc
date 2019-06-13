@@ -1,0 +1,21 @@
+.resumeGrid {
+  width: 100vw;
+  display: grid;
+  margin: auto;
+  overflow: hidden;
+  background-color: #222;
+
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+  grid-template-columns: 5fr 1fr;
+  grid-template-areas:
+    'header header'
+    'content sidebar'
+    'content blogList'
+    'content ...'
+    'content ...';
+
+  align-items: center;
+  margin-bottom: 200px;
+}

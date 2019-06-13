@@ -13,7 +13,7 @@ interface PageProps {
   blog: any;
 }
 
-export default class IndexPage extends React.Component<PageProps, {}> {
+export default class BlogPage extends React.Component<PageProps, {}> {
   public render() {
     return (
       <Layout>
