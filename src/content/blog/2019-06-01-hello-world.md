@@ -30,7 +30,7 @@ Design uses CSS Grid to be responsive on all devices.
 
 ### Setup
 
-- Knowledge of [npm](https://www.npmjs.com/) required.
+-   Knowledge of [npm](https://www.npmjs.com/) required.
 
 ```bash
 # install needed files
@@ -54,11 +54,11 @@ yarn start
 
 ### Editing
 
-- Create your own [fork](https://help.github.com/en/articles/fork-a-repo).
+-   Create your own [fork](https://help.github.com/en/articles/fork-a-repo).
 
-- Make changes to your forked copy.
+-   Make changes to your forked copy.
 
-- Deploy those changes to [gh-pages](https://pages.github.com/).
+-   Deploy those changes to [gh-pages](https://pages.github.com/).
 
 ```bash
 # deploy to gh-pages

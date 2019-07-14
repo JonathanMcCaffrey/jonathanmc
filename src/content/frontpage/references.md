@@ -7,128 +7,128 @@ coverBlur: 'covers/devices_blur.webp'
 <style>
 
 .quote {
-    padding: 30px;
-    margin: auto;
-    background-image: radial-gradient(#353535, #353535, #333);
-    border: #393939 solid 1px;
+	padding: 30px;
+	margin: auto;
+	background-image: radial-gradient(#353535, #353535, #333);
+	border: #393939 solid 1px;
 
-    text-align: right;
+	text-align: right;
 }
 
 .breakline {
-    width: 100%;
-    background: #888 solid 1px;
-    border-bottom: #888 solid 1px;
-    margin-bottom: 20px;
+	width: 100%;
+	background: #888 solid 1px;
+	border-bottom: #888 solid 1px;
+	margin-bottom: 20px;
 }
 
 .breaklines {
-    width: 100%;
-    border-top: #888 solid 1px;
-    border-bottom: #888 solid 1px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-top: 40px;
-    padding-bottom: 40px;
+	width: 100%;
+	border-top: #888 solid 1px;
+	border-bottom: #888 solid 1px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
 .quote .info {
-    max-width: 100%;
-    height: 100px;
-    margin: auto;
-    margin-top: 30px;
-    text-align: left;
+	max-width: 100%;
+	height: 100px;
+	margin: auto;
+	margin-top: 30px;
+	text-align: left;
 
-    display:block;
+	display:block;
 }
 
 .quote .infoText {
-    height: 50px;
-    padding-top: 20px;
-    margin: auto;
-    text-align: right;
+	height: 50px;
+	padding-top: 20px;
+	margin: auto;
+	text-align: right;
 }
 
 .quote .img img {
-    margin-top: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    
+	margin-top: auto;
+	margin-left: 20px;
+	margin-right: 20px;
+	
 
-    float: left;
-    border-radius: 20%;
-    width: 90px;
-    height: 90px;
-    position: relative;
-    border: #888 solid 2px;
+	float: left;
+	border-radius: 20%;
+	width: 90px;
+	height: 90px;
+	position: relative;
+	border: #888 solid 2px;
 }
 
 .quote .name {
-    position: relative;
-    color: lightblue;
-    font-weight: 600;
-    
+	position: relative;
+	color: lightblue;
+	font-weight: 600;
+	
 }
 
 .quote .title {
-    font-size: 0.8em;
+	font-size: 0.8em;
 }
 
 @media only screen and (max-width: 1024px) {
-    .breaklines {
-        margin: 0;
-    }
-    .quote {
-        width: 100%;
-        margin: 0;
-    }
+	.breaklines {
+		margin: 0;
+	}
+	.quote {
+		width: 100%;
+		margin: 0;
+	}
 }
 
 @media only screen and (min-width: 1023px) {
-    .quote {
-        width: 90%;
-    }
+	.quote {
+		width: 90%;
+	}
 }
 
 
 @media only screen and (max-width: 599px) {
-    .container {
-        width: 100%;
-        margin: auto;
-    }
+	.container {
+		width: 100%;
+		margin: auto;
+	}
 
-    .item-a {
-        width: 138px;
-        padding-bottom: 20px;
-        margin: auto;
-        text-align:center;
-    }
+	.item-a {
+		width: 138px;
+		padding-bottom: 20px;
+		margin: auto;
+		text-align:center;
+	}
 
 
-    .item-b {
-        margin: auto;
-        text-align: center;
-        display:block;
-    }
+	.item-b {
+		margin: auto;
+		text-align: center;
+		display:block;
+	}
 
 }
 
 @media only screen and (min-width: 600px) {
-    .container {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-    }
+	.container {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		justify-items: center;
+	}
 
-    .item-a {
-        grid: 0;
-        margin: auto;
-    }
+	.item-a {
+		grid: 0;
+		margin: auto;
+	}
 
-    .item-b {
-        grid: 1;
-        margin: auto;
-    }
+	.item-b {
+		grid: 1;
+		margin: auto;
+	}
 }
 
 

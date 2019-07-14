@@ -7,18 +7,18 @@ coverBlur: 'covers/computer_blur.webp'
 <style>
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 70px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 10px;
-    border-radius: 50%;
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 10px;
+	border-radius: 50%;
 
 }
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-facebook {
@@ -26,11 +26,11 @@ coverBlur: 'covers/computer_blur.webp'
 }
 
 .fa-github {
-    background: #000;
+	background: #000;
 }
 
 .fa-linkedin {
-    background: #0077b5;
+	background: #0077b5;
 }
 
 
