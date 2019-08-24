@@ -37,7 +37,7 @@ export const renderImage = (image: string, data: any, key: string) => {
 	});
 };
 
-export const renderImageWithCustomStype = (
+export const renderImageWithCustomType = (
 	image: string,
 	data: any,
 	key: string,

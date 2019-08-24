@@ -17,28 +17,28 @@ interface PageProps {
 	location: any;
 }
 
-export default class IndexPage extends React.Component<PageProps, {}> {
-	public render() {
-		return (
-			<Layout>
-				<div className={styles.blogList}>
-					<BlogList data={this.props.data} />
-				</div>
-				<div className={styles.header}>
-					<Header />
-				</div>
-				<div className={styles.sidebar}>
-					<Menu selected='/' />
-				</div>
-				<div className={styles.content}>
-					<FrontPage data={this.props.data} />
-				</div>
+const IndexPage = (props: PageProps) => {
+	return (
+		<Layout>
+			<div className={styles.blogList}>
+				<BlogList data={props.data} />
+			</div>
+			<div className={styles.header}>
+				<Header />
+			</div>
+			<div className={styles.sidebar}>
+				<Menu selected='/' />
+			</div>
+			<div className={styles.content}>
+				<FrontPage data={props.data} />
+			</div>
 
-				<div className={styles.spacer} />
-			</Layout>
-		);
-	}
-}
+			<div className={styles.spacer} />
+		</Layout>
+	);
+};
+
+export default IndexPage;
 
 export const pageQuery = graphql`
 	query Index {

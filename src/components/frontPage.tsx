@@ -4,16 +4,12 @@ import {
 	renderImage,
 	renderBackgroundImage,
 	renderMarkdown,
-	renderImageWithCustomStype
+	renderImageWithCustomType
 } from '../utils';
 import styles from '../styles/_global.module.scss';
 
-interface PageProps {
-	data: any;
-}
-
-export default class FrontPage extends React.Component<PageProps, {}> {
-	public pageContent() {
+const FrontPage = (props: any) => {
+	const pageContent = () => {
 		return (() => {
 			const orderedPage: any = [];
 
@@ -21,30 +17,30 @@ export default class FrontPage extends React.Component<PageProps, {}> {
 				orderedPage.push(
 					renderImage(
 						node.coverBlur,
-						this.props.data,
+						props.data,
 						'i1_' + orderedPage.length
 					)
 				);
 				orderedPage.push(
 					renderBackgroundImage(
 						node.cover,
-						this.props.data,
+						props.data,
 						'i2_' + orderedPage.length
 					)
 				);
 				orderedPage.push(
 					renderImage(
 						node.coverBlur,
-						this.props.data,
+						props.data,
 						'i3_' + orderedPage.length
 					)
 				);
 
 				if (node.title === 'About') {
 					orderedPage.push(
-						renderImageWithCustomStype(
+						renderImageWithCustomType(
 							'face.jpg',
-							this.props.data,
+							props.data,
 							'',
 							styles.Jonathan
 						)
@@ -54,7 +50,7 @@ export default class FrontPage extends React.Component<PageProps, {}> {
 				orderedPage.push(
 					renderMarkdown(
 						node.title,
-						this.props.data,
+						props.data,
 						'i4_' + orderedPage.length
 					)
 				);
@@ -62,9 +58,9 @@ export default class FrontPage extends React.Component<PageProps, {}> {
 
 			return orderedPage;
 		})();
-	}
+	};
 
-	public render() {
-		return <div>{this.pageContent()}</div>;
-	}
-}
+	return <div>{pageContent()}</div>;
+};
+
+export default FrontPage;
