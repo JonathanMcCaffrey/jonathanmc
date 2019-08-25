@@ -1,0 +1,58 @@
+query resumeData {
+	site {
+		siteMetadata {
+			siteName
+		}
+	}
+	jobs: allMarkdownRemark(
+		filter: { fileAbsolutePath: { regex: "/.*/resume/jobs/.*/" } }
+	) {
+		edges {
+			node {
+				id
+				rawMarkdownBody
+				frontmatter {
+					period
+					mainrole
+					company
+					companyDetails
+				}
+			}
+		}
+	}
+	projects: allMarkdownRemark(
+		filter: { fileAbsolutePath: { regex: "/.*/resume/projects/.*/" } }
+	) {
+		edges {
+			node {
+				id
+				rawMarkdownBody
+				frontmatter {
+					quote
+					project
+					period
+					via
+					projectDetails
+					roles
+					Technology
+					display
+				}
+			}
+		}
+	}
+	references: allMarkdownRemark(
+		filter: { fileAbsolutePath: { regex: "/.*/resume/references/.*/" } }
+	) {
+		edges {
+			node {
+				id
+				rawMarkdownBody
+				frontmatter {
+					title
+					fullname
+					quote
+				}
+			}
+		}
+	}
+}
