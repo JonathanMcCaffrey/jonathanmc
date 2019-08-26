@@ -36,7 +36,7 @@ coverBlur: 'covers/computer_blur.webp'
 
 </style>
 
-**Jonathan McCaffrey** is the **Customer Success Lead** on the BaaS project brainCloud. By extension, he is also a developer at bitHeads, a tech company working on custom solutions for enterprise applications. He loves tools and will try to fix a problem with a premade solution so more time can be spent making more solutions, and is currently addicted to LinkedIn Learning videos. He is also a co-organizer and routine visitor the Ottawa Unity User Group, and needs to give more tech talks.
+**Jonathan McCaffrey** is a software developer on the [brainCloud](https://getbraincloud.com/) project at bitHeads, a tech company working on custom solutions for enterprise applications. He loves tools and will try to fix a problem with a premade solution so more time can be spent making more solutions, and is currently addicted to LinkedIn Learning videos. He is also a co-organizer and routine visitor the Ottawa Unity User Group, and needs to give more tech talks.
 
 <a href="https://github.com/JonathanMcCaffrey" class="fa fa-github"></a>
 <a href="https://www.facebook.com/jonathan.mccaffrey.50" class="fa fa-facebook" ></a>
