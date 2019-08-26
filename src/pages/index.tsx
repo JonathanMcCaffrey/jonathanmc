@@ -6,6 +6,7 @@ import Layout from '../layouts';
 import styles from '../styles/_global.module.scss';
 import Menu from '../components/sidebar';
 import Header from '../components/header';
+import Footer from '../components/footer';
 
 interface PageProps {
 	data: {
@@ -20,20 +21,25 @@ interface PageProps {
 const IndexPage = (props: PageProps) => {
 	return (
 		<Layout>
-			<div className={styles.blogList}>
-				<BlogList data={props.data} />
-			</div>
-			<div className={styles.header}>
-				<Header />
-			</div>
-			<div className={styles.sidebar}>
-				<Menu selected='/' />
+			<div className={styles.contentGrid}>
+				<div className={styles.blogList}>
+					<BlogList data={props.data} />
+				</div>
+				<div className={styles.header}>
+					<Header />
+				</div>
+				<div className={styles.sidebar}>
+					<Menu selected='/' />
+				</div>
+				<div className={styles.content}>
+					<FrontPage data={props.data} />
+				</div>
+
+				<div className={styles.spacer} />
 			</div>
 			<div className={styles.content}>
-				<FrontPage data={props.data} />
+				<Footer />
 			</div>
-
-			<div className={styles.spacer} />
 		</Layout>
 	);
 };

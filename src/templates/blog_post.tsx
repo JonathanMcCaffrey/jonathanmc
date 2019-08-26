@@ -6,36 +6,42 @@ import Menu from '../components/sidebar';
 import BlogList from '../components/blogList';
 import Header from '../components/header';
 import { renderBackgroundImage } from '../utils';
+import Footer from '../components/footer';
 
 export default ({ data }: any) => {
 	const post = data.markdownRemark;
 	return (
 		<Layout>
-			<div className={styles.blogList}>
-				<BlogList data={data} />
-			</div>
-
-			<div className={styles.header}>
-				<Header />
-			</div>
-			<div className={styles.sidebar}>
-				<Menu selected='/blog/' />
-			</div>
-
-			<div className={styles.content}>
-				{renderBackgroundImage(post.frontmatter.cover, data, '')}
-
-				<div className={styles.inner}>
-					<p className={styles.blogInfo}>
-						<b>Created on:</b> {post.frontmatter.created} <br />
-						<b>Updated on:</b> {post.frontmatter.lastUpdated}
-					</p>
-					<h1 className={styles.blogTitle}>
-						{post.frontmatter.title}
-					</h1>
-
-					<div dangerouslySetInnerHTML={{ __html: post.html }} />
+			<div className={styles.contentGrid}>
+				<div className={styles.blogList}>
+					<BlogList data={data} />
 				</div>
+
+				<div className={styles.header}>
+					<Header />
+				</div>
+				<div className={styles.sidebar}>
+					<Menu selected='/blog/' />
+				</div>
+
+				<div className={styles.content}>
+					{renderBackgroundImage(post.frontmatter.cover, data, '')}
+
+					<div className={styles.inner}>
+						<p className={styles.blogInfo}>
+							<b>Created on:</b> {post.frontmatter.created} <br />
+							<b>Updated on:</b> {post.frontmatter.lastUpdated}
+						</p>
+						<h1 className={styles.blogTitle}>
+							{post.frontmatter.title}
+						</h1>
+
+						<div dangerouslySetInnerHTML={{ __html: post.html }} />
+					</div>
+				</div>
+			</div>
+			<div className={styles.content}>
+				<Footer />
 			</div>
 		</Layout>
 	);

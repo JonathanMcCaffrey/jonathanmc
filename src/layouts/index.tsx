@@ -1,5 +1,4 @@
 import * as React from 'react';
-import styles from '../styles/_global.module.scss';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/footer';
 
@@ -14,10 +13,7 @@ const MainLayout = (props: any) => (
 			<link rel='canonical' href='https://jonathanmc.dev/' />
 		</Helmet>
 
-		<div className={styles.contentGrid}>{props.children}</div>
-		<div className={styles.content}>
-			<Footer />
-		</div>
+		{props.children}
 	</div>
 );
 
