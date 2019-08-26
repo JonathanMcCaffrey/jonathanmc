@@ -1,5 +1,5 @@
 ---
-project: 'Rubik's Cube'
+project: 'Rubik’s Cube'
 period: '2013'
 via: 'Smoke Labs'
 projectDetails: 'Branded iOS title'
