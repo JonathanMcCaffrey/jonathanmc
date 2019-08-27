@@ -65,7 +65,7 @@ const Resume = styled.div`
 	*:after {
 		color: black;
 
-		font-size: 0.8rem;
+		font-size: 0.76rem;
 	}
 
 	li {

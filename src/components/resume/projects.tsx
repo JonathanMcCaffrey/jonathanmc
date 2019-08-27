@@ -78,7 +78,7 @@ const ProjectRight = styled.div`
 
 const ProjectPeriod = styled.div`
 	color: rgb(50, 50, 50);
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	font-weight: 200;
 	font-style: italic;
 	padding-left: 4px;
@@ -92,7 +92,7 @@ const ProjectName = styled.div`
 `;
 
 const ProjectText = styled.div`
-	font-size: 0.65rem;
+	font-size: 0.6rem;
 	display: inline-block;
 `;
 
