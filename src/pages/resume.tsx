@@ -176,7 +176,7 @@ const ResumePage = (props: { data: ResumeDataQuery }) => {
 export default ResumePage;
 
 const SideSection = styled.div`
-	background-color: rgb(200, 200, 200);
+	border: 2px solid rgb(200, 200, 200);
 	font-size: 1rem;
 	font-weight: 500;
 	padding: 4px 10px;
@@ -227,8 +227,9 @@ const ResumeContent = styled.div`
 `;
 
 const Section = styled.div`
-	border-top: 2px solid rgb(200, 200, 200);
-	border-bottom: 2px solid rgb(200, 200, 200);
+	border: 2px solid rgb(200, 200, 200);
+	//	border-top: 2px solid rgb(200, 200, 200);
+	//border-bottom: 2px solid rgb(200, 200, 200);
 	margin: 2px 0px;
 	font-size: 1rem;
 	font-weight: 600;
