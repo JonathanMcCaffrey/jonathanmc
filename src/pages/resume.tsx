@@ -90,7 +90,6 @@ const showProjects = (data: ResumeDataQuery) => {
 								{element.node.frontmatter!.Technology}
 							</ProjectText>
 							<Spacer></Spacer>
-							<Spacer></Spacer>
 						</ProjectContent>
 					</ProjectBlock>
 				);
@@ -150,7 +149,11 @@ const ResumePage = (props: { data: ResumeDataQuery }) => {
 				{showSkills(props.data)}
 			</ResumeLeft>
 			<ResumeRight>
-				<Text>{props.data.resume.frontmatter!.intro!}</Text>
+				<Intro
+					dangerouslySetInnerHTML={{
+						__html: props.data.resume!.html!
+					}}
+				/>
 				<Section>Experience</Section>
 				{showJobs(props.data)}
 				<Section>Education and Conferences</Section>
@@ -377,6 +380,12 @@ const Skill = styled.div`
 
 const JobInfo = styled.div`
 	padding: 1px 1px;
+`;
+
+const Intro = styled.div`
+	padding: 4px 2px 0px 8px;
+	font-size: 0.8rem;
+	margin-bottom: -25px;
 `;
 
 const Text = styled.div`

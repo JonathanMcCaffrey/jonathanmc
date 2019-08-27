@@ -1,5 +1,5 @@
 ---
-intro: 'In the industry since 2012 while playing a pivotal role in all aspects of our software stack while developing native iOS and Android applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining clients APIs, test automation, tooling, and customer success, on cloud-based technology.'
+intro: 'In the industry since 2012 while playing a pivotal role in all aspects of our software stack while developing native **iOS** and **Android** applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining clients APIs, test automation, tooling, and customer success, on cloud-based technology.'
 fullname: Jonathan McCaffrey
 Position: Full Stack Developer
 Address: 2045 Carling
@@ -14,15 +14,15 @@ Skills:
     'Java',
     'C#',
     'C++',
-    'ObjC',
-    'HTML,CSS',
-    'JS,TypeScript',
-    'Agile,Jira',
+    'ObjC, Swift',
+    'HTML, CSS',
+    'JS, TypeScript',
+    'Agile, Jira',
     'Unit Tests',
     'Selenium',
     'Jenkins',
-    'REST,APIs',
-    'PC,Mac,Mobile',
+    'REST, APIs',
+    'PC, Mac, Mobile',
     'Gatsby',
     'Unity',
     'Regex',
@@ -45,3 +45,5 @@ FutureLearning: [
   'Angular 8'
 ]
 ---
+
+In the industry since 2012 while playing a pivotal role in all aspects of our software stack while developing native **iOS** and **Android** applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining clients APIs, test automation, tooling, and customer success, on cloud-based technology.
