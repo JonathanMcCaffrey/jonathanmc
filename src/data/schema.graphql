@@ -30,6 +30,7 @@ query resumeData {
 
 	jobs: allMarkdownRemark(
 		filter: { fileAbsolutePath: { regex: "/.*/resume/jobs/.*/" } }
+		sort: { fields: frontmatter___order, order: DESC }
 	) {
 		edges {
 			node {
@@ -41,12 +42,14 @@ query resumeData {
 					mainrole
 					company
 					companyDetails
+					order
 				}
 			}
 		}
 	}
 	projects: allMarkdownRemark(
 		filter: { fileAbsolutePath: { regex: "/.*/resume/projects/.*/" } }
+		sort: { fields: frontmatter___order, order: DESC }
 	) {
 		edges {
 			node {
@@ -62,12 +65,14 @@ query resumeData {
 					roles
 					Technology
 					display
+					order
 				}
 			}
 		}
 	}
 	references: allMarkdownRemark(
 		filter: { fileAbsolutePath: { regex: "/.*/resume/references/.*/" } }
+		sort: { fields: frontmatter___order, order: DESC }
 	) {
 		edges {
 			node {
@@ -78,6 +83,7 @@ query resumeData {
 					title
 					fullname
 					quote
+					order
 				}
 			}
 		}

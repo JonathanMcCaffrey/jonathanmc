@@ -6,4 +6,5 @@ projectDetails: 'Magmic iOS Sudoku title'
 roles: Ad Intergration.
 Technology: ObjC, C++, Cocos2d-x, Jira, Git.
 display: true
+order: 5
 ---

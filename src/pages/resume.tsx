@@ -3,6 +3,8 @@ import * as React from 'react';
 import { ResumeDataQuery } from '../generated/graphql';
 import styled from 'styled-components';
 
+//TODO Break up this code into multiple files
+
 const showJobs = (data: ResumeDataQuery) => {
 	return data.jobs.edges.reverse().map(element => {
 		return (
@@ -56,7 +58,6 @@ const showReferences = (data: ResumeDataQuery) => {
 						<ReferenceQuote>
 							"{element!.node.frontmatter!.quote}"
 						</ReferenceQuote>
-						<Spacer />
 					</>
 				);
 			})}
@@ -71,7 +72,9 @@ const showProjects = (data: ResumeDataQuery) => {
 				return (
 					<ProjectBlock>
 						<ProjectLeft>
-							{element.node.frontmatter!.period}
+							<ProjectPeriod>
+								{element.node.frontmatter!.period}
+							</ProjectPeriod>
 						</ProjectLeft>
 						<ProjectRight>
 							<ProjectName>
@@ -89,7 +92,6 @@ const showProjects = (data: ResumeDataQuery) => {
 							<ProjectText>
 								{element.node.frontmatter!.Technology}
 							</ProjectText>
-							<Spacer></Spacer>
 						</ProjectContent>
 					</ProjectBlock>
 				);
@@ -130,11 +132,11 @@ const showPersonalInfo = (data: ResumeDataQuery) => {
 
 const showSkills = (data: ResumeDataQuery) => {
 	return (
-		<Text>
+		<>
 			{data.resume!.frontmatter!.Skills!.map(element => {
 				return <Skill>{element}</Skill>;
 			})}
-		</Text>
+		</>
 	);
 };
 
@@ -175,9 +177,10 @@ export default ResumePage;
 
 const SideSection = styled.div`
 	background-color: rgb(200, 200, 200);
-	font-size: 1.1rem;
+	font-size: 1rem;
 	font-weight: 500;
-	padding: 10px;
+	padding: 4px 10px;
+	margin-top: -8px;
 `;
 
 const Resume = styled.div`
@@ -202,6 +205,10 @@ const Resume = styled.div`
 
 		font-size: 0.8rem;
 	}
+
+	li {
+		margin-bottom: 4px;
+	}
 `;
 
 const ResumeLeft = styled.div`
@@ -216,6 +223,7 @@ const ResumeRight = styled.div`
 const ResumeContent = styled.div`
 	grid-area: ResumeContent;
 	padding: 10px;
+	margin-top: 24px;
 `;
 
 const Section = styled.div`
@@ -273,8 +281,8 @@ const LeftJob = styled.div`
 
 const ContentJob = styled.div`
 	grid-area: ContentJob;
-	padding-top: 2px;
 	padding-left: 2px;
+	margin-bottom: -8px;
 `;
 
 const RightJob = styled.div`
@@ -311,6 +319,16 @@ const ProjectContent = styled.div`
 
 const ProjectRight = styled.div`
 	grid-area: ProjectRight;
+	height: 100%;
+`;
+
+const ProjectPeriod = styled.div`
+	color: rgb(50, 50, 50);
+	font-size: 0.8rem;
+	font-weight: 200;
+	font-style: italic;
+	padding-left: 4px;
+	padding-right: 4px;
 	height: 100%;
 `;
 
@@ -357,16 +375,13 @@ const ReferenceQuote = styled.div`
 	padding: 10px;
 `;
 
-const Spacer = styled.div`
-	padding: 4px;
-`;
-
 const InfoLabel = styled.div`
 	font-weight: 700;
+	font-size: 0.75rem;
 `;
 const InfoText = styled.div`
 	padding-bottom: 8px;
-	font-size: 0.85rem;
+	font-size: 0.8rem;
 	word-break: break-all;
 `;
 const InfoArea = styled.div`
@@ -374,8 +389,10 @@ const InfoArea = styled.div`
 `;
 
 const Skill = styled.div`
-	font-weight: 700;
-	padding: 4px;
+	font-weight: 600;
+	padding-left: 8px;
+	padding-bottom: 4px;
+	padding-top: 2px;
 `;
 
 const JobInfo = styled.div`
@@ -389,8 +406,8 @@ const Intro = styled.div`
 `;
 
 const Text = styled.div`
-	padding: 4px 8px;
-	font-size: 0.8rem;
+	padding: 2px 4px;
+	font-size: 0.75rem;
 `;
 
 export const pageQuery = graphql`
@@ -426,6 +443,7 @@ export const pageQuery = graphql`
 
 		jobs: allMarkdownRemark(
 			filter: { fileAbsolutePath: { regex: "/.*/resume/jobs/.*/" } }
+			sort: { fields: frontmatter___order, order: DESC }
 		) {
 			edges {
 				node {
@@ -437,12 +455,14 @@ export const pageQuery = graphql`
 						mainrole
 						company
 						companyDetails
+						order
 					}
 				}
 			}
 		}
 		projects: allMarkdownRemark(
 			filter: { fileAbsolutePath: { regex: "/.*/resume/projects/.*/" } }
+			sort: { fields: frontmatter___order, order: DESC }
 		) {
 			edges {
 				node {
@@ -458,12 +478,14 @@ export const pageQuery = graphql`
 						roles
 						Technology
 						display
+						order
 					}
 				}
 			}
 		}
 		references: allMarkdownRemark(
 			filter: { fileAbsolutePath: { regex: "/.*/resume/references/.*/" } }
+			sort: { fields: frontmatter___order, order: DESC }
 		) {
 			edges {
 				node {
@@ -474,6 +496,7 @@ export const pageQuery = graphql`
 						title
 						fullname
 						quote
+						order
 					}
 				}
 			}

@@ -6,4 +6,5 @@ projectDetails: 'Android app for recording customer network feedback.'
 roles: Android Developer.
 Technology: Java.
 display: true
+order: 9
 ---

@@ -6,4 +6,5 @@ projectDetails: 'Android and iOS for helping students who are attending Algonqui
 roles: Mobile Developer.
 Technology: Java, ObjC.
 display: true
+order: 8
 ---

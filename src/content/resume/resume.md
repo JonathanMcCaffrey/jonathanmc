@@ -11,8 +11,7 @@ GitHub: https://github.com/JonathanMcCaffrey
 Facebook: https://www.facebook.com/jonathan.mccaffrey.50
 Skills:
   [
-    'Java',
-    'C#',
+    'Java, C#',
     'C++',
     'ObjC, Swift',
     'HTML, CSS',

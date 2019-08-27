@@ -6,4 +6,5 @@ projectDetails: 'Branded mobile game on iOS.'
 roles: Game Developer.
 Technology: ObjC, C++, Cocos2d-x, Jira, Git.
 display: true
+order: 7
 ---

@@ -6,4 +6,5 @@ projectDetails: 'Branded iOS title'
 roles: 'IAP Integration.'
 Technology: 'ObjC, C++.'
 display: true
+order: 3
 ---
