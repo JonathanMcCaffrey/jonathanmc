@@ -7,12 +7,17 @@ import styled from 'styled-components';
 const showJobs = (data: ResumeDataQuery) => {
 	return data.jobs.edges.map(element => {
 		return (
-			<>
+			<Block>
 				<Text>{element.node.frontmatter!.company}</Text>
 				<Text>{element.node.frontmatter!.period}</Text>
 				<Text>{element.node.frontmatter!.mainrole}</Text>
 				<Text>{element.node.frontmatter!.companyDetails}</Text>
-			</>
+
+				<div></div>
+				<Text
+					dangerouslySetInnerHTML={{ __html: element.node.html! }}
+				/>
+			</Block>
 		);
 	});
 };
@@ -22,6 +27,15 @@ const ResumePage = (props: { data: ResumeDataQuery }) => {
 };
 
 export default ResumePage;
+
+const Block = styled.div`
+	background-color: rgb(40, 40, 40);
+	border: 1px rgb(80, 80, 80) solid;
+	padding: 20px;
+	margin: 40px auto;
+	layout: block;
+	width: 80vw;
+`;
 
 const Text = styled.p`
 	color: white;
@@ -42,6 +56,7 @@ export const pageQuery = graphql`
 				node {
 					id
 					rawMarkdownBody
+					html
 					frontmatter {
 						period
 						mainrole
@@ -58,6 +73,7 @@ export const pageQuery = graphql`
 				node {
 					id
 					rawMarkdownBody
+					html
 					frontmatter {
 						quote
 						project
@@ -78,6 +94,7 @@ export const pageQuery = graphql`
 				node {
 					id
 					rawMarkdownBody
+					html
 					frontmatter {
 						title
 						fullname

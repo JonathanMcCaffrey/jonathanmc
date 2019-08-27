@@ -247,7 +247,7 @@ export type Directory = Node & {
   gid?: Maybe<Scalars['Int']>,
   rdev?: Maybe<Scalars['Int']>,
   blksize?: Maybe<Scalars['Int']>,
-  ino?: Maybe<Scalars['Float']>,
+  ino?: Maybe<Scalars['Int']>,
   blocks?: Maybe<Scalars['Int']>,
   atimeMs?: Maybe<Scalars['Float']>,
   mtimeMs?: Maybe<Scalars['Float']>,
@@ -502,7 +502,7 @@ export type DirectoryFilterInput = {
   gid?: Maybe<IntQueryOperatorInput>,
   rdev?: Maybe<IntQueryOperatorInput>,
   blksize?: Maybe<IntQueryOperatorInput>,
-  ino?: Maybe<FloatQueryOperatorInput>,
+  ino?: Maybe<IntQueryOperatorInput>,
   blocks?: Maybe<IntQueryOperatorInput>,
   atimeMs?: Maybe<FloatQueryOperatorInput>,
   mtimeMs?: Maybe<FloatQueryOperatorInput>,
@@ -562,7 +562,7 @@ export type File = Node & {
   gid?: Maybe<Scalars['Int']>,
   rdev?: Maybe<Scalars['Int']>,
   blksize?: Maybe<Scalars['Int']>,
-  ino?: Maybe<Scalars['Float']>,
+  ino?: Maybe<Scalars['Int']>,
   blocks?: Maybe<Scalars['Int']>,
   atimeMs?: Maybe<Scalars['Float']>,
   mtimeMs?: Maybe<Scalars['Float']>,
@@ -923,6 +923,8 @@ export enum FileFieldsEnum {
   ChildImageSharpInternalType = 'childImageSharp___internal___type',
   ChildMarkdownRemarkId = 'childMarkdownRemark___id',
   ChildMarkdownRemarkFrontmatterTitle = 'childMarkdownRemark___frontmatter___title',
+  ChildMarkdownRemarkFrontmatterCover = 'childMarkdownRemark___frontmatter___cover',
+  ChildMarkdownRemarkFrontmatterCoverBlur = 'childMarkdownRemark___frontmatter___coverBlur',
   ChildMarkdownRemarkFrontmatterIntro = 'childMarkdownRemark___frontmatter___intro',
   ChildMarkdownRemarkFrontmatterFullname = 'childMarkdownRemark___frontmatter___fullname',
   ChildMarkdownRemarkFrontmatterAddress = 'childMarkdownRemark___frontmatter___Address',
@@ -937,8 +939,6 @@ export enum FileFieldsEnum {
   ChildMarkdownRemarkFrontmatterEducation = 'childMarkdownRemark___frontmatter___Education',
   ChildMarkdownRemarkFrontmatterRecentLearning = 'childMarkdownRemark___frontmatter___RecentLearning',
   ChildMarkdownRemarkFrontmatterFutureLearning = 'childMarkdownRemark___frontmatter___FutureLearning',
-  ChildMarkdownRemarkFrontmatterCover = 'childMarkdownRemark___frontmatter___cover',
-  ChildMarkdownRemarkFrontmatterCoverBlur = 'childMarkdownRemark___frontmatter___coverBlur',
   ChildMarkdownRemarkFrontmatterQuote = 'childMarkdownRemark___frontmatter___quote',
   ChildMarkdownRemarkFrontmatterProject = 'childMarkdownRemark___frontmatter___project',
   ChildMarkdownRemarkFrontmatterPeriod = 'childMarkdownRemark___frontmatter___period',
@@ -1034,7 +1034,7 @@ export type FileFilterInput = {
   gid?: Maybe<IntQueryOperatorInput>,
   rdev?: Maybe<IntQueryOperatorInput>,
   blksize?: Maybe<IntQueryOperatorInput>,
-  ino?: Maybe<FloatQueryOperatorInput>,
+  ino?: Maybe<IntQueryOperatorInput>,
   blocks?: Maybe<IntQueryOperatorInput>,
   atimeMs?: Maybe<FloatQueryOperatorInput>,
   mtimeMs?: Maybe<FloatQueryOperatorInput>,
@@ -1726,6 +1726,8 @@ export type MarkdownRemarkFields = {
 export enum MarkdownRemarkFieldsEnum {
   Id = 'id',
   FrontmatterTitle = 'frontmatter___title',
+  FrontmatterCover = 'frontmatter___cover',
+  FrontmatterCoverBlur = 'frontmatter___coverBlur',
   FrontmatterIntro = 'frontmatter___intro',
   FrontmatterFullname = 'frontmatter___fullname',
   FrontmatterAddress = 'frontmatter___Address',
@@ -1740,8 +1742,6 @@ export enum MarkdownRemarkFieldsEnum {
   FrontmatterEducation = 'frontmatter___Education',
   FrontmatterRecentLearning = 'frontmatter___RecentLearning',
   FrontmatterFutureLearning = 'frontmatter___FutureLearning',
-  FrontmatterCover = 'frontmatter___cover',
-  FrontmatterCoverBlur = 'frontmatter___coverBlur',
   FrontmatterQuote = 'frontmatter___quote',
   FrontmatterProject = 'frontmatter___project',
   FrontmatterPeriod = 'frontmatter___period',
@@ -1885,6 +1885,8 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
   __typename?: 'MarkdownRemarkFrontmatter',
   title?: Maybe<Scalars['String']>,
+  cover?: Maybe<Scalars['String']>,
+  coverBlur?: Maybe<Scalars['String']>,
   intro?: Maybe<Scalars['String']>,
   fullname?: Maybe<Scalars['String']>,
   Address?: Maybe<Scalars['String']>,
@@ -1899,8 +1901,6 @@ export type MarkdownRemarkFrontmatter = {
   Education?: Maybe<Array<Maybe<Scalars['String']>>>,
   RecentLearning?: Maybe<Array<Maybe<Scalars['String']>>>,
   FutureLearning?: Maybe<Array<Maybe<Scalars['String']>>>,
-  cover?: Maybe<Scalars['String']>,
-  coverBlur?: Maybe<Scalars['String']>,
   quote?: Maybe<Scalars['String']>,
   project?: Maybe<Scalars['String']>,
   period?: Maybe<Scalars['String']>,
@@ -1936,6 +1936,8 @@ export type MarkdownRemarkFrontmatterLastUpdatedArgs = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>,
+  cover?: Maybe<StringQueryOperatorInput>,
+  coverBlur?: Maybe<StringQueryOperatorInput>,
   intro?: Maybe<StringQueryOperatorInput>,
   fullname?: Maybe<StringQueryOperatorInput>,
   Address?: Maybe<StringQueryOperatorInput>,
@@ -1950,8 +1952,6 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   Education?: Maybe<StringQueryOperatorInput>,
   RecentLearning?: Maybe<StringQueryOperatorInput>,
   FutureLearning?: Maybe<StringQueryOperatorInput>,
-  cover?: Maybe<StringQueryOperatorInput>,
-  coverBlur?: Maybe<StringQueryOperatorInput>,
   quote?: Maybe<StringQueryOperatorInput>,
   project?: Maybe<StringQueryOperatorInput>,
   period?: Maybe<StringQueryOperatorInput>,
@@ -2094,7 +2094,7 @@ export type QueryFileArgs = {
   gid?: Maybe<IntQueryOperatorInput>,
   rdev?: Maybe<IntQueryOperatorInput>,
   blksize?: Maybe<IntQueryOperatorInput>,
-  ino?: Maybe<FloatQueryOperatorInput>,
+  ino?: Maybe<IntQueryOperatorInput>,
   blocks?: Maybe<IntQueryOperatorInput>,
   atimeMs?: Maybe<FloatQueryOperatorInput>,
   mtimeMs?: Maybe<FloatQueryOperatorInput>,
@@ -2271,7 +2271,7 @@ export type QueryDirectoryArgs = {
   gid?: Maybe<IntQueryOperatorInput>,
   rdev?: Maybe<IntQueryOperatorInput>,
   blksize?: Maybe<IntQueryOperatorInput>,
-  ino?: Maybe<FloatQueryOperatorInput>,
+  ino?: Maybe<IntQueryOperatorInput>,
   blocks?: Maybe<IntQueryOperatorInput>,
   atimeMs?: Maybe<FloatQueryOperatorInput>,
   mtimeMs?: Maybe<FloatQueryOperatorInput>,
@@ -3220,7 +3220,7 @@ export type ResumeDataQuery = (
       { __typename?: 'MarkdownRemarkEdge' }
       & { node: (
         { __typename?: 'MarkdownRemark' }
-        & Pick<MarkdownRemark, 'id' | 'rawMarkdownBody'>
+        & Pick<MarkdownRemark, 'id' | 'rawMarkdownBody' | 'html'>
         & { frontmatter: Maybe<(
           { __typename?: 'MarkdownRemarkFrontmatter' }
           & Pick<MarkdownRemarkFrontmatter, 'period' | 'mainrole' | 'company' | 'companyDetails'>
@@ -3233,7 +3233,7 @@ export type ResumeDataQuery = (
       { __typename?: 'MarkdownRemarkEdge' }
       & { node: (
         { __typename?: 'MarkdownRemark' }
-        & Pick<MarkdownRemark, 'id' | 'rawMarkdownBody'>
+        & Pick<MarkdownRemark, 'id' | 'rawMarkdownBody' | 'html'>
         & { frontmatter: Maybe<(
           { __typename?: 'MarkdownRemarkFrontmatter' }
           & Pick<MarkdownRemarkFrontmatter, 'quote' | 'project' | 'period' | 'via' | 'projectDetails' | 'roles' | 'Technology' | 'display'>
@@ -3246,7 +3246,7 @@ export type ResumeDataQuery = (
       { __typename?: 'MarkdownRemarkEdge' }
       & { node: (
         { __typename?: 'MarkdownRemark' }
-        & Pick<MarkdownRemark, 'id' | 'rawMarkdownBody'>
+        & Pick<MarkdownRemark, 'id' | 'rawMarkdownBody' | 'html'>
         & { frontmatter: Maybe<(
           { __typename?: 'MarkdownRemarkFrontmatter' }
           & Pick<MarkdownRemarkFrontmatter, 'title' | 'fullname' | 'quote'>

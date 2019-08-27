@@ -11,6 +11,7 @@ query resumeData {
 			node {
 				id
 				rawMarkdownBody
+				html
 				frontmatter {
 					period
 					mainrole
@@ -27,6 +28,7 @@ query resumeData {
 			node {
 				id
 				rawMarkdownBody
+				html
 				frontmatter {
 					quote
 					project
@@ -47,6 +49,7 @@ query resumeData {
 			node {
 				id
 				rawMarkdownBody
+				html
 				frontmatter {
 					title
 					fullname
