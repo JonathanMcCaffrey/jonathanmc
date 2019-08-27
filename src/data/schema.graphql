@@ -4,6 +4,30 @@ query resumeData {
 			siteName
 		}
 	}
+
+	resume: markdownRemark(
+		fileAbsolutePath: { regex: "/.*resume/resume.md/" }
+	) {
+		id
+		frontmatter {
+			intro
+			fullname
+			Address
+			Phone
+			Email
+			WWW
+			LinkedIn
+			GitHub
+			Facebook
+			Skills
+			FutureLearning
+			Education
+			Conferences
+			Position
+		}
+		html
+	}
+
 	jobs: allMarkdownRemark(
 		filter: { fileAbsolutePath: { regex: "/.*/resume/jobs/.*/" } }
 	) {
