@@ -56,13 +56,11 @@ var pageHeight = '660px';
 const GlobalStyle = createGlobalStyle`
   html {
 		background-color: rgb(250, 250, 250);
-  }
+	}
 `;
 
 const Page = styled.div`
-	background-color: rgb(250, 250, 250);
 	height: 2100px;
-	padding: 2px;
 `;
 
 const Resume = styled.div`

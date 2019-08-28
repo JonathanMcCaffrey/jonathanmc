@@ -23,8 +23,9 @@ const Projects = (props: { data: ResumeDataQuery }) => {
 								<ProjectItalic>
 									{element.node.frontmatter!.projectDetails}
 								</ProjectItalic>
+								<TechnologyBold>Roles:</TechnologyBold>
 								<ProjectText>
-									Roles: {element.node.frontmatter!.roles}
+									{element.node.frontmatter!.roles}
 								</ProjectText>
 							</ProjectRight>
 							<ProjectContent>
@@ -44,18 +45,18 @@ const Projects = (props: { data: ResumeDataQuery }) => {
 export default Projects;
 
 const ProjectGrid = styled.div`
-	padding: 10px;
+	padding: 5px;
 	display: grid;
+	grid-gap: 10px;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
 `;
 
 const ProjectBlock = styled.div`
-	padding: 2px;
+	padding: 1px;
 	margin: 1px;
 	display: grid;
-	grid-template-columns: 1fr 8px 8fr;
-	grid-template-rows: auto;
+	grid-template-columns: 1fr 1px 8fr;
 	grid-template-areas:
 		'ProjectLeft . ProjectRight'
 		'ProjectContent ProjectContent ProjectContent';
@@ -63,18 +64,15 @@ const ProjectBlock = styled.div`
 
 const ProjectLeft = styled.div`
 	grid-area: ProjectLeft;
-	height: 100%;
 `;
 
 const ProjectContent = styled.div`
 	grid-area: ProjectContent;
-	margin-top: -2px;
 	padding-left: 2px;
 `;
 
 const ProjectRight = styled.div`
 	grid-area: ProjectRight;
-	height: 100%;
 `;
 
 const ProjectPeriod = styled.div`
@@ -100,7 +98,6 @@ const ProjectText = styled.div`
 
 const ProjectItalic = styled.div`
 	font-size: 0.6rem;
-	display: inline-block;
 	padding: 0px 5px;
 	font-style: italic;
 `;
@@ -108,7 +105,6 @@ const ProjectItalic = styled.div`
 const TechnologyText = styled.div`
 	font-size: 0.6rem;
 	display: inline-block;
-	margin-top: -4px;
 	margin-bottom: 4px;
 `;
 
@@ -117,6 +113,5 @@ const TechnologyBold = styled.div`
 	display: inline-block;
 	padding-right: 4px;
 	font-size: 0.65rem;
-	margin-top: -4px;
 	margin-bottom: 4px;
 `;
