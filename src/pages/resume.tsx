@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
 import { ResumeDataQuery } from '../generated/graphql';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import Education from '../components/resume/education';
 import Jobs from '../components/resume/jobs';
 import PersonalInfo from '../components/resume/personalInfo';
@@ -43,6 +43,8 @@ const ResumePage = (props: { data: ResumeDataQuery }) => {
 					<Projects data={props.data} />
 				</ResumeContent>
 			</Resume>
+
+			<GlobalStyle />
 		</Page>
 	);
 };
@@ -50,28 +52,17 @@ const ResumePage = (props: { data: ResumeDataQuery }) => {
 export default ResumePage;
 
 var pageHeight = '660px';
-const Box = styled.div`
-	//background-color: rgb(244, 0, 0);
 
-	width: 21cm;
-	height: ${pageHeight};
-
-	margin-bottom: -${pageHeight};
-`;
-
-const Box2 = styled.div`
-	//background-color: rgb(0, 244, 0);
-
-	width: 21cm;
-	height: ${pageHeight};
-
-	margin-top: ${pageHeight};
-	margin-bottom: calc(-${pageHeight} - ${pageHeight});
+const GlobalStyle = createGlobalStyle`
+  html {
+		background-color: rgb(250, 250, 250);
+  }
 `;
 
 const Page = styled.div`
 	background-color: rgb(250, 250, 250);
 	height: 2100px;
+	padding: 2px;
 `;
 
 const Resume = styled.div`
@@ -91,7 +82,6 @@ const Resume = styled.div`
 	*:before,
 	*:after {
 		color: black;
-
 		font-size: 0.73rem;
 	}
 

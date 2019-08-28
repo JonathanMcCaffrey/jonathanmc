@@ -12,7 +12,7 @@ const SideSection = styled.div`
 
 const Section = styled.div`
 	border: 2px solid rgb(100, 100, 100);
-	margin: 2px 0px;
+	margin: 2px 2px;
 	font-size: 1rem;
 	font-weight: 500;
 	padding: 2px 8px;
