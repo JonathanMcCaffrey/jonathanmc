@@ -30,7 +30,7 @@ const References = (props: { data: ResumeDataQuery }) => {
 export default References;
 
 const Spacer = styled.div`
-	margin-bottom: 90px;
+	margin-bottom: 30px;
 `;
 
 const ReferenceArea = styled.div`

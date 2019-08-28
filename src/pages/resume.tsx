@@ -101,6 +101,7 @@ const Resume = styled.div`
 const ResumeLeft = styled.div`
 	grid-area: ResumeLeft;
 	background-color: rgb(245, 245, 245);
+	padding-bottom: 30px;
 `;
 
 const ResumeRight = styled.div`
