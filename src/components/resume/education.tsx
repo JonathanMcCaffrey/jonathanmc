@@ -7,15 +7,21 @@ const Education = (props: { data: ResumeDataQuery }) => {
 	return (
 		<>
 			<Section>Education and Conferences</Section>
-			<Text>{props.data.resume!.frontmatter!.Education}</Text>
-			{props.data.resume!.frontmatter!.Conferences!.map(element => {
-				return <Text>{element}</Text>;
-			})}
+			<Area>
+				<Text>{props.data.resume!.frontmatter!.Education}</Text>
+				{props.data.resume!.frontmatter!.Conferences!.map(element => {
+					return <Text>{element}</Text>;
+				})}
+			</Area>
 		</>
 	);
 };
 
 export default Education;
+
+const Area = styled.div`
+	padding: 10px;
+`;
 
 const Text = styled.div`
 	padding: 2px 4px;

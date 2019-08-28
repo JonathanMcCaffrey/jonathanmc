@@ -20,18 +20,18 @@ const Projects = (props: { data: ResumeDataQuery }) => {
 								<ProjectName>
 									{element.node.frontmatter!.project}
 								</ProjectName>
-								<ProjectText>
-									{element.node.frontmatter!.roles}
-								</ProjectText>
-								<ProjectText>
+								<ProjectItalic>
 									{element.node.frontmatter!.projectDetails}
+								</ProjectItalic>
+								<ProjectText>
+									Roles: {element.node.frontmatter!.roles}
 								</ProjectText>
 							</ProjectRight>
 							<ProjectContent>
-								<ProjectTextBold>Technology: </ProjectTextBold>
-								<ProjectText>
+								<TechnologyBold>Technology: </TechnologyBold>
+								<TechnologyText>
 									{element.node.frontmatter!.Technology}
-								</ProjectText>
+								</TechnologyText>
 							</ProjectContent>
 						</ProjectBlock>
 					);
@@ -44,6 +44,7 @@ const Projects = (props: { data: ResumeDataQuery }) => {
 export default Projects;
 
 const ProjectGrid = styled.div`
+	padding: 10px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto;
@@ -94,11 +95,28 @@ const ProjectName = styled.div`
 const ProjectText = styled.div`
 	font-size: 0.6rem;
 	display: inline-block;
+	padding: 0px 5px;
 `;
 
-const ProjectTextBold = styled.div`
+const ProjectItalic = styled.div`
+	font-size: 0.6rem;
+	display: inline-block;
+	padding: 0px 5px;
+	font-style: italic;
+`;
+
+const TechnologyText = styled.div`
+	font-size: 0.6rem;
+	display: inline-block;
+	margin-top: -4px;
+	margin-bottom: 4px;
+`;
+
+const TechnologyBold = styled.div`
 	font-weight: 500;
 	display: inline-block;
 	padding-right: 4px;
 	font-size: 0.65rem;
+	margin-top: -4px;
+	margin-bottom: 4px;
 `;

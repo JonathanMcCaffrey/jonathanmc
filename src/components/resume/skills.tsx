@@ -18,7 +18,7 @@ export default Skills;
 
 const Skill = styled.div`
 	font-weight: 600;
-	padding-left: 8px;
-	padding-bottom: 4px;
-	padding-top: 2px;
+	padding-left: 10px;
+	padding-bottom: 1px;
+	padding-top: 6px;
 `;

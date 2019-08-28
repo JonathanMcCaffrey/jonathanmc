@@ -43,6 +43,7 @@ export default Jobs;
 
 const JobInfo = styled.div`
 	padding: 1px 1px;
+	margin-bottom: -18px;
 `;
 
 const MainRole = styled.div`
@@ -75,7 +76,7 @@ const CompanyDetails = styled.div`
 `;
 
 const JobBlock = styled.div`
-	padding: 2px;
+	padding: 10px;
 	margin: 1px;
 	display: grid;
 	grid-template-columns: 1fr 8px 8fr;

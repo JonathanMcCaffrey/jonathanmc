@@ -20,42 +20,67 @@ const showName = (data: ResumeDataQuery) => {
 
 const ResumePage = (props: { data: ResumeDataQuery }) => {
 	return (
-		<Resume>
-			<ResumeLeft>
-				{showName(props.data)}
-				<PersonalInfo data={props.data} />
-				<Skills data={props.data} />
-			</ResumeLeft>
-			<ResumeRight>
-				<Intro
-					dangerouslySetInnerHTML={{
-						__html: props.data.resume!.html!
-					}}
-				/>
-				<Jobs data={props.data} />
-				<Education data={props.data} />
-			</ResumeRight>
-			<ResumeContent>
-				<References data={props.data} />
-				<Projects data={props.data} />
-			</ResumeContent>
-		</Resume>
+		<Page>
+			<Resume>
+				<ResumeLeft>
+					{showName(props.data)}
+					<PersonalInfo data={props.data} />
+					<Skills data={props.data} />
+				</ResumeLeft>
+				<ResumeRight>
+					<Intro
+						dangerouslySetInnerHTML={{
+							__html: props.data.resume!.html!
+						}}
+					/>
+					<Jobs data={props.data} />
+					<Education data={props.data} />
+				</ResumeRight>
+				<ResumeContent>
+					<References data={props.data} />
+					<Projects data={props.data} />
+				</ResumeContent>
+			</Resume>
+		</Page>
 	);
 };
 
 export default ResumePage;
 
+var pageHeight = '660px';
+const Box = styled.div`
+	//background-color: rgb(244, 0, 0);
+
+	width: 21cm;
+	height: ${pageHeight};
+
+	margin-bottom: -${pageHeight};
+`;
+
+const Box2 = styled.div`
+	//background-color: rgb(0, 244, 0);
+
+	width: 21cm;
+	height: ${pageHeight};
+
+	margin-top: ${pageHeight};
+	margin-bottom: calc(-${pageHeight} - ${pageHeight});
+`;
+
+const Page = styled.div`
+	background-color: rgb(250, 250, 250);
+	height: 2100px;
+`;
+
 const Resume = styled.div`
-	background-color: rgb(244, 244, 244);
+	background-color: rgb(250, 250, 250);
 
 	min-width: 21cm;
-	min-height: 29.7cm;
 	max-width: 21cm;
 	margin: 0 auto;
 
 	display: grid;
 	grid-template-columns: 3fr 0px 8fr;
-	grid-template-rows: auto;
 	grid-template-areas:
 		'ResumeLeft . ResumeRight'
 		'ResumeContent ResumeContent ResumeContent';
@@ -65,7 +90,7 @@ const Resume = styled.div`
 	*:after {
 		color: black;
 
-		font-size: 0.76rem;
+		font-size: 0.73rem;
 	}
 
 	li {
@@ -75,23 +100,24 @@ const Resume = styled.div`
 
 const ResumeLeft = styled.div`
 	grid-area: ResumeLeft;
-	background-color: rgb(240, 240, 240);
+	background-color: rgb(245, 245, 245);
 `;
 
 const ResumeRight = styled.div`
 	grid-area: ResumeRight;
+	height: ${pageHeight};
 `;
 
 const ResumeContent = styled.div`
 	grid-area: ResumeContent;
-	padding: 10px;
-	margin-top: 24px;
+	height: ${pageHeight};
 `;
 
 const Name = styled.div`
 	padding-top: 5px;
+	padding-left: 2px;
 	font-weight: 700;
-	font-size: 1.02em;
+	font-size: 1.1em;
 `;
 const Position = styled.div`
 	padding-bottom: 10px;
@@ -102,7 +128,9 @@ const MainArea = styled.div`
 `;
 
 const Intro = styled.div`
-	padding: 4px 2px 0px 8px;
+	padding: 10px;
+
+	//	padding: 8px 10px 4px 10px;
 	font-size: 0.8rem;
 	margin-bottom: -25px;
 `;

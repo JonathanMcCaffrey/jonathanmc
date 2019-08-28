@@ -1,5 +1,4 @@
 ---
-intro: 'In the industry since 2012 while playing a pivotal role in all aspects of our software stack while developing native **iOS** and **Android** applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining clients APIs, test automation, tooling, and customer success, on cloud-based technology.'
 fullname: Jonathan McCaffrey
 Position: Full Stack Developer
 Address: 2045 Carling

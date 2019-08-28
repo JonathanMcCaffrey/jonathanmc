@@ -10,7 +10,7 @@ const References = (props: { data: ResumeDataQuery }) => {
 			<Section>References</Section>
 			{props.data.references!.edges.map(element => {
 				return (
-					<>
+					<ReferenceArea>
 						<ReferenceName>
 							{element!.node.frontmatter!.fullname},
 						</ReferenceName>
@@ -20,7 +20,7 @@ const References = (props: { data: ResumeDataQuery }) => {
 						<ReferenceQuote>
 							"{element!.node.frontmatter!.quote}"
 						</ReferenceQuote>
-					</>
+					</ReferenceArea>
 				);
 			})}
 		</>
@@ -30,7 +30,11 @@ const References = (props: { data: ResumeDataQuery }) => {
 export default References;
 
 const Spacer = styled.div`
-	padding: 20px;
+	margin-bottom: 90px;
+`;
+
+const ReferenceArea = styled.div`
+	padding: 10px;
 `;
 
 const ReferenceName = styled.div`
@@ -44,6 +48,9 @@ const ReferenceTitle = styled.div`
 	margin-bottom: -12px;
 `;
 const ReferenceQuote = styled.div`
-	padding: 10px;
-	margin-top: -12px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+	margin-top: -10px;
 `;
