@@ -8,6 +8,7 @@ import PersonalInfo from '../components/resume/personalInfo';
 import References from '../components/resume/references';
 import Projects from '../components/resume/projects';
 import Skills from '../components/resume/skills';
+import { Section } from '../components/resume';
 
 const showName = (data: ResumeDataQuery) => {
 	return (
@@ -28,6 +29,7 @@ const ResumePage = (props: { data: ResumeDataQuery }) => {
 					<Skills data={props.data} />
 				</ResumeLeft>
 				<ResumeRight>
+					<Section>Summary</Section>
 					<Intro
 						dangerouslySetInnerHTML={{
 							__html: props.data.resume!.html!
@@ -107,6 +109,7 @@ const ResumeLeft = styled.div`
 const ResumeRight = styled.div`
 	grid-area: ResumeRight;
 	height: ${pageHeight};
+	padding-top: 12px;
 `;
 
 const ResumeContent = styled.div`
