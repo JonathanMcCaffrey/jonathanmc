@@ -148,7 +148,6 @@ export const pageQuery = graphql`
 		) {
 			id
 			frontmatter {
-				intro
 				Position
 				fullname
 				Address
