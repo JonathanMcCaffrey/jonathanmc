@@ -4,6 +4,8 @@ module.exports = {
 		siteName: `jonathanmc`
 	},
 	plugins: [
+		`gatsby-transformer-sharp`, 
+		`gatsby-plugin-sharp`,
 		`gatsby-transformer-yaml`,
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -35,9 +37,7 @@ module.exports = {
 				path: `${__dirname}/src/content/`
 			}
 		},
-		`gatsby-transformer-sharp`,
 		'gatsby-plugin-react-helmet',
-		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
@@ -51,37 +51,7 @@ module.exports = {
 				include_favicon: true
 			}
 		},
-		{
-			resolve: `gatsby-plugin-favicon`,
-			options: {
-				logo: './src/images/favicon.png',
-
-				// WebApp Manifest Configuration
-				appName: null, // Inferred with your package.json
-				appDescription: null,
-				developerName: null,
-				developerURL: null,
-				dir: 'auto',
-				lang: 'en-US',
-				background: '#fff',
-				theme_color: '#fff',
-				display: 'standalone',
-				orientation: 'any',
-				start_url: '/?homescreen=1',
-				version: '1.0',
-
-				icons: {
-					android: false,
-					appleIcon: false,
-					appleStartup: false,
-					coast: false,
-					favicons: true,
-					firefox: true,
-					yandex: false,
-					windows: false
-				}
-			}
-		},
+	
 		`gatsby-plugin-sass`,
 		`gatsby-plugin-less`,
 		`gatsby-plugin-postcss`,
