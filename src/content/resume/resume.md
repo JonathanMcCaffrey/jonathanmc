@@ -1,6 +1,6 @@
 ---
 fullname: Jonathan McCaffrey
-Position: Full Stack Developer
+Position: React.js Developer
 Address: 2045 Carling
 Phone: 613-277-8353
 Email: jonmcc.0723@gmail.com
@@ -10,19 +10,17 @@ GitHub: https://github.com/JonathanMcCaffrey
 Facebook: https://www.facebook.com/jonathan.mccaffrey.50
 Skills:
   [
-    'Java, C#',
-    'C++',
-    'ObjC, Swift',
+    'React',
     'HTML, CSS',
     'JS, TypeScript',
-    'Agile, Jira',
+    'Agile, Scrum',
+    'Jira',
     'Unit Tests',
     'Selenium',
     'Jenkins',
     'REST, APIs',
     'PC, Mac, Mobile',
-    'Gatsby',
-    'Unity',
+    'Documentation',
     'Regex',
   ]
 Conferences: [ 
@@ -44,4 +42,4 @@ FutureLearning: [
 ]
 ---
 
-In the industry since 2012 while playing a pivotal role in all aspects of our software stack while developing native **iOS** and **Android** applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining clients APIs, test automation, tooling, and customer success, on cloud-based technology.
+In the industry since 2012, while playing a pivotal role in all aspects of our software stack while developing native **iOS** and **Android** applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining client APIs, test automation, tooling, and customer success, on cloud-based technology. Currently working in the web development space with React.js.
