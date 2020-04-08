@@ -1,14 +1,16 @@
-import { graphql } from 'gatsby';
 import * as React from 'react';
-import { ResumeDataQuery } from '../generated/graphql';
+
 import styled, { createGlobalStyle } from 'styled-components';
+
 import Education from '../components/resume/education';
 import Jobs from '../components/resume/jobs';
 import PersonalInfo from '../components/resume/personalInfo';
-import References from '../components/resume/references';
 import Projects from '../components/resume/projects';
-import Skills from '../components/resume/skills';
+import References from '../components/resume/references';
+import { ResumeDataQuery } from '../generated/graphql';
 import { Section } from '../components/resume';
+import Skills from '../components/resume/skills';
+import { graphql } from 'gatsby';
 
 const showName = (data: ResumeDataQuery) => {
 	return (
@@ -39,7 +41,9 @@ const ResumePage = (props: { data: ResumeDataQuery }) => {
 					<Education data={props.data} />
 				</ResumeRight>
 				<ResumeContent>
-					<References data={props.data} />
+					{
+						//<References data={props.data} />
+					}
 					<Projects data={props.data} />
 				</ResumeContent>
 			</Resume>
