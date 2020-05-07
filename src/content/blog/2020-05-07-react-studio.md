@@ -44,6 +44,10 @@ Before continuing forward, I need to look at tutorials on using the React Studio
 
 A React Webinar Neonto Studio by  can be found [here](https://www.youtube.com/watch?v=Rfd7zmlFZw8).
 
+At the [14:38](https://youtu.be/Rfd7zmlFZw8?t=878) of the Webinar, the video shows its one button click to deploy a test copy of the website, via the **[Open in Web Browser]** button. That's amazing.
+
+![One click to open in web browser](OpenInWebBrowser.png)
+
 
 
 Then document page.
