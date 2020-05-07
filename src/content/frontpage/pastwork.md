@@ -4,9 +4,16 @@ cover: 'covers/laptop.webp'
 coverBlur: 'covers/laptop_blur.webp'
 ---
 
-## brainCloud (2016-Present)
+## TaleSpin (2019-2020)
 
--   **[Project]** backend for games, apps and things.
+-   **[Project]** Web app and portal for VR training services.
+-   **[Roles]** Web Developer.
+-   **[Technology]** JavaScript, TypeScript, React, Material UI.
+
+
+## brainCloud (2016-2020)
+
+-   **[Project]** Backend for games, apps and things.
 -   **[Roles]** Test Automation Engineer. Customer Success Specialist. Full-stack Developer.
 -   **[Technology]** C++, C#, Ruby on Rails, Java, JavaScript, ReactJs, Selenium, ObjC, Swift, Unreal, Unity, Intercom, Jenkins, Middleman, Jira, Unit Tests, Confluence, Prezi Next, Snagit, WordPress, bitBucket.
 
