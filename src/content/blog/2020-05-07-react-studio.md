@@ -28,7 +28,7 @@ Currently, this page has a lot of redundant features with the Resume.
 
 It should be simplified and streamlined, to basically state that I exist, and act as resource of links to the rest of the website.
 
-My first item to attempt is changing the colour, via clicking on the App Settings panel, and visiting the App Styles tab. The System Colouring setting unfortunately seems to only work with a color picker. It's a bit cumbersome, and I don't see a method of changing the text colour either. Given this, I am going to leave it with the default colour scheme for now.
+My first item to attempt is changing the color, via clicking on the App Settings panel, and visiting the App Styles tab. The System coloring setting unfortunately seems to only work with a color picker. It's a bit cumbersome, and I don't see a method of changing the default text color. Given this, I am going to leave it with the default color scheme for now.
 
 ![Cumbersome App Settings Color Picking UI](AppSettingSystemColor.png)
 
@@ -47,6 +47,19 @@ A React Webinar Neonto Studio by  can be found [here](https://www.youtube.com/wa
 At the [14:38](https://youtu.be/Rfd7zmlFZw8?t=878) of the Webinar, the video shows its one button click to deploy a test copy of the website, via the **[Open in Web Browser]** button. That's amazing.
 
 ![One click to open in web browser](OpenInWebBrowser.png)
+
+Ya, awesome webinar. 
+
+- explains how to keep sizing mobile first for reduced duplication of work
+- how to handle creating components and properly handle sizing and layouts
+- how to use and pass data throughout the web app
+
+Using the tool should now feel natural, with those aspects explained.
+
+For my usages, I also needed to view [this](https://www.youtube.com/watch?v=Bo7AifzkOrM) video on Creating a Side Bar Menu.
+
+
+
 
 
 
