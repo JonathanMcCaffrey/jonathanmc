@@ -12,7 +12,7 @@ excerpt: 'Website update notes'
 
 View [gatsbyjs's website](https://www.gatsbyjs.org/) document section as the main inspiration.
 
-This website should also be a test bed for all personal training and testing. Website repo has been made private. Long term, it should be split into a public repo, and a private fork.
+This website should also be a test bed for all personal training and testing.
 
 **Ideas in Scope of Redesign:**
 - Remake Website with React Studio
@@ -25,7 +25,7 @@ This website should also be a test bed for all personal training and testing. We
 
 ## Document Driven Design
 
-Attempt to implement document driven developement.
+Attempt to implement document driven development.
 
 Document new features before implementation. 
 
