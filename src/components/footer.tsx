@@ -5,15 +5,23 @@ const Footer = () => {
 	return (
 		<div className={styles.footer}>
 			<div className={styles.footerText}>
-				Like this website? Check it out on my{' '}
-				<a
+
+
+				{
+					/*
+					Like this website? Check it out on my{' '}
+					<a
 					href={
-						'https://github.com/JonathanMcCaffrey/website-jonathanmc'
-					}
-				>
+					'https://github.com/JonathanMcCaffrey/website-jonathanmc'
+				}
+					>
 					github
-				</a>
-				.
+					</a>
+
+					.
+					*/
+				}
+
 			</div>
 		</div>
 	);
