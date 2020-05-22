@@ -1,6 +1,6 @@
 ---
 mainrole: 'Full Stack Developer'
-period: '2015 - present'
+period: '2015 - 2020'
 company: 'bitHeads'
 companyDetails: 'Tech shop with a focus on cloud-based technology'
 order: 2

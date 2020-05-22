@@ -1,6 +1,6 @@
 ---
 project: 'TaleSpin'
-period: '2019 - present'
+period: '2019 - 2020'
 via: 'bitHeads'
 projectDetails: 'Web app and portal for VR training services.'
 roles: Web Developer.

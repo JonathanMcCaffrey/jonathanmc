@@ -1,6 +1,6 @@
 ---
 fullname: Jonathan McCaffrey
-Position: React.js Developer
+Position: Full Stack Developer
 Address: 2045 Carling
 Phone: 613-277-8353
 Email: jonmcc.0723@gmail.com
@@ -42,4 +42,4 @@ FutureLearning: [
 ]
 ---
 
-In the industry since 2012, while playing a pivotal role in all aspects of our software stack while developing native **iOS** and **Android** applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining client APIs, test automation, tooling, and customer success, on cloud-based technology. Currently working in the web development space with React.js.
+In the industry since 2012, while playing a pivotal role in all aspects of our software stack while developing native **iOS** and **Android** applications. Worked on several projects from design to release, and improved products with features and patches based on customer feedback and data. Moved on to maintaining client APIs, test automation, tooling, and customer success, on cloud-based technology.
